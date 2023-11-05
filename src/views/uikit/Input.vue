@@ -589,12 +589,11 @@ export default {
 					</Toolbar>
 					<br>
 
-					<DataTable :value="tablaCompras" v-model:selection="productoItem" class="p-datatable-gridlines"
-						dataKey="cns" :rows="5"
-						paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-						:rowsPerPageOptions="[5, 10, 25]"
-						currentPageReportTemplate="Visualizando {last} de {totalRecords} productos"
-						style="margin-bottom: 20px" :paginator="true" responsiveLayout="scroll">
+                <DataTable class="p-datatable-gridlines" :paginator="true" :rows="10"
+                    paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
+                    :rowsPerPageOptions="[5, 10, 25]"
+                    currentPageReportTemplate="Visualiando {last} de {totalRecords} lotes en recolección"
+                    responsiveLayout="scroll">
 
 						<Column field="cns" header="Cns" :sortable="true" style="width:50px"></Column>
 						<Column field="nomProducto" header="Nombre del Producto" style="width:370px"></Column>
