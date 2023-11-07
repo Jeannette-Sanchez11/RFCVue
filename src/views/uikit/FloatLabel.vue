@@ -103,7 +103,7 @@ export default defineComponent({
                                     :rowsPerPageOptions="[5,10,15,20,25]" 
                                     tableStyle="min-width: 50rem" 
                                     currentPageReportTemplate="Visualizando {last} de {totalRecords} empleados!">
-                                        <Column field="employee_name" header="Nombre"></Column>
+                                        <Column field="employee_name" :sortable="true" header="Nombre"></Column>
                                         <Column field="employee_salary" header="Salario"></Column>
                                         <Column field="employee_age" header="Edad"></Column>
                                     </DataTable>
