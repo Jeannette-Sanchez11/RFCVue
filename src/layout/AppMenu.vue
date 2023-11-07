@@ -14,6 +14,7 @@ const model = ref([
             { label: 'Demo RFC', icon: 'pi pi-fw pi-id-card', to: '/uikit/formlayout' },
             { label: 'Demo Punto De Venta', icon: 'pi pi-fw pi-check-square', to: '/uikit/input' },
             { label: 'Demo API', icon: 'pi pi-fw pi-check-square', to: '/uikit/floatlabel' },
+            { label: 'Demo UIChart', icon: 'pi pi-fw pi-check-square', to: '/uikit/charts' },
         ]
     }
 ]);
