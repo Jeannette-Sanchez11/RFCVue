@@ -44,7 +44,7 @@ export default defineComponent({
         Consultar() {
 
             if (this.id_emp === null) {
-                this.$toast.add({ severity: 'error', summary: 'Error al buscar', detail: 'No has Ingresado su ID del empleado', life: 5000 });
+                this.$toast.add({ severity: 'warn', summary: 'Favor de ingresar el ID del empleado', detail: 'No has Ingresado su ID del empleado', life: 5000 });
 
             } else {
                 axios.get(`https://dummy.restapiexample.com/api/v1/employee/${this.id_emp}`, {
@@ -56,7 +56,8 @@ export default defineComponent({
                     then((response) => {
                         this.empleado = response.data.data;
                     }).catch((error) => {
-                        alert("Error: " + error.response.status + " " + error.response.statusText);
+                        //alert("Error: " + error.response.status + " " + error.response.statusText);
+                        this.$toast.add({ severity: 'warn', summary: 'Error interno de la API', detail: 'LA API GENERA UN "TIPO ERROR" AL BUSCAR LOS DATOS DE UN EMPLEADO EN ESPECIFICO!', life: 3000 });
                         console.log(error);
                     });
             }
